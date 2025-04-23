@@ -5,8 +5,8 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 h1 {
@@ -16,15 +16,67 @@ h1 {
 .MetroUi-Container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
 }
 
-.MetroMetroUi-Header {
-  flex: auto;
+.MetroUi-Header {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.MetroUi-Body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.Avatar {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: white;
+  gap: 8px;
+  padding: 3px 12px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.Avatar:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+  transform: translateY(-1.5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+}
+
+.Avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #b1b1b13d;
+}
+
+.Avatar .Avatar-Name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Avatar .Avatar-Name h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.Avatar .Avatar-Name h3 {
+  margin: 0;
+  font-size: 0.8rem;
 }
